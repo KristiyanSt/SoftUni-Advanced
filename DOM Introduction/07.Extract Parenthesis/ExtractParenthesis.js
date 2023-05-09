@@ -6,5 +6,5 @@ function extract(content) {
     for (const match of matches) {
         result.push(match.groups.name);
     }
-    console.log(result.join(', '));
+    return result.join(', ');
 }
