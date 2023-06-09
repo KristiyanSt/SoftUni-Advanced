@@ -3,7 +3,7 @@ function lockedProfile() {
     templateProfile.remove();
     (async () => {
         try{
-            response = await fetch('http://localhost:3030/jsonstore/advanced/profils');
+            response = await fetch('http://localhost:3030/jsonstore/advanced/profiles');
             let profilesInfo = await response.json();
             let keys = Object.keys(profilesInfo);
             for(let i = 0; i < keys.length;i++){
