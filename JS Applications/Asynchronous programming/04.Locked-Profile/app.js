@@ -2,13 +2,22 @@ function lockedProfile() {
     let templateProfile = document.querySelector('div[class="profile"]')
     templateProfile.remove();
     (async () => {
-        let response = await fetch('http://localhost:3030/jsonstore/advanced/profiles');
-        let profilesInfo = await response.json();
-        let keys = Object.keys(profilesInfo);
-        for(let i = 0; i < keys.length;i++){
-            let currentProfile = profilesInfo[keys[i]];
-            createProfile(currentProfile.username,currentProfile.email,currentProfile.age,i+1);
+        try{
+            response = await fetch('http://localhost:3030/jsonstore/advanced/profils');
+            let profilesInfo = await response.json();
+            let keys = Object.keys(profilesInfo);
+            for(let i = 0; i < keys.length;i++){
+                let currentProfile = profilesInfo[keys[i]];
+                createProfile(currentProfile.username,currentProfile.email,currentProfile.age,i+1);
+            }
+        }catch(err){
+            let main = document.getElementById('main');
+            let error = document.createElement('h3');
+            error.textContent = 'There was an error'
+            error.style.textAlign = "center"
+            main.appendChild(error);
         }
+        
     })();
 
     function createProfile(username,email,age,index){
