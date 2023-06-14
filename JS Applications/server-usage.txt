@@ -1,0 +1,6 @@
+For each task that requires rest service you have to start the server locally on your computer.
+Server's recourses are attached to each task.
+To execute the server, run the included start.bat file, or manually open a command prompt and run node server.js.
+
+Here is whole server's documentation :
+https://github.com/softuni-practice-server/softuni-practice-server
