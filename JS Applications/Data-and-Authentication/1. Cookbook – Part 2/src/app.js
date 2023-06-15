@@ -13,9 +13,9 @@ logoutEl.addEventListener('click',()=>{
 function loadRecipes(){
 
     if(sessionStorage.authToken !== undefined){
-        document.getElementById('user').style.display = 'block'; 
+        document.getElementById('user').style.display = 'inline-block'; 
     }else{
-        document.getElementById('guest').style.display = 'block'; 
+        document.getElementById('guest').style.display = 'inline-block'; 
     }
     
 
