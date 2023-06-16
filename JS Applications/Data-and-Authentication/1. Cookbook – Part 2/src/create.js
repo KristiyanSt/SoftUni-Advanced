@@ -24,7 +24,6 @@ function loginHandler(e){
     })
     .then(response => response.json())
     .then(data=> {
-        console.log(data)
         if(data.code){
             throw new Error(data.message);
         }
