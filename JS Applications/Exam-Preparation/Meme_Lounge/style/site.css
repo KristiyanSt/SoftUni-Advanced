@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    box-shadow: 2px 5px 13px 0px #000000, 8px -15px 31px -12px rgb(0 0 0 / 0%);
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.container.signin {
+    margin-top: 20px;
+}
+
+textarea {
+    height: 80px;
+}
+
+.error {
+    color: red;
+    font-size: 125%;
+}
+
+.is-invalid {
+    border: 2px solid red;
+}
+.error {
+    padding: 15px 0 15px 0;
+}
+
+.loading {
+    padding: 40px;
+    text-align: center;
+    font-size: 125%;
+}
