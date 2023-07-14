@@ -10,7 +10,7 @@ export async function request(url, method = 'get', body) {
         headers:{}
     };
 
-    let user = await getUserData();
+    let user = getUserData();
     if (user) {
         options.headers['X-Authorization'] = user.accessToken;
     }

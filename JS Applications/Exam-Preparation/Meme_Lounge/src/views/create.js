@@ -8,7 +8,7 @@ const createTemplate = (eventHandler, errMessage, errors) => html`
                 <div class="container">
                     <h1>Create Meme</h1>
                     <label for="title">Title</label>
-                    <input class=${errors.title ? 'is-invalid' : null}id="title" type="text" placeholder="Enter Title" name="title">
+                    <input class=${errors.title ? 'is-invalid' : null} id="title" type="text" placeholder="Enter Title" name="title">
                     <label for="description">Description</label>
                     <textarea class=${errors.description ? 'is-invalid' : null} id="description" placeholder="Enter Description" name="description"></textarea>
                     <label for="imageUrl">Meme Image</label>
@@ -27,6 +27,7 @@ export async function createPage(ctx) {
         let entries = Object.entries(data);
         let errorsEntries = entries.filter(([type, val]) => val.trim() == "");
         Object.assign(errors, errorsEntries.reduce((a, [k, v]) => Object.assign(a, { [k]: true }), {}));
+
         try {
             if (Object.keys(errors).length > 0) {
                 throw {
@@ -35,7 +36,6 @@ export async function createPage(ctx) {
                 }
             }
             const meme = await postMeme(data);
-            console.log(meme)
             ctx.page.redirect(`/details/${meme._id}`);
         } catch (err) {
             let message = err.message || err.error.message;

@@ -16,10 +16,11 @@ logoutBtn.addEventListener('click',onLogout);
 updateNav();
 
 page(decorateContext);
-page('/',homePage);
+page('/',welcomePage);
+page('index.html', welcomePage);
+page('/catalog',homePage)
 page('/login',loginPage);
 page('/register', registerPage);
-page('/welcome', welcomePage);
 page('/details/:id',detailsPage);
 page('/create',createPage)
 page('/my-profile', profilePage)
