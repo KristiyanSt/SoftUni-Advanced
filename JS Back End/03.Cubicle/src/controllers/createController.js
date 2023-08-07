@@ -10,9 +10,8 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const result = await createCube(req.body);
-        res.redirect(`/details/${result.id}`);
+        res.redirect('/details/' + result._id)
     } catch (err) {
-        console.log(err.fields);
         res.render('create', {
             error: err.message.split('\n')
         })

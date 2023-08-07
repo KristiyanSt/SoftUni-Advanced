@@ -1,22 +1,17 @@
 const express = require('express');
-const setupViewEngine = require('./config/viewEngine.js');
-const config = require('./config/config.js');
+const expressConfig = require('./config/expressConfig.js');
+const routesConfig = require('./config/routes.js');
+const databaseConfig = require('./config/database.js');
 
-const app = express();
-setupViewEngine(app);
+start();
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static('./src/static'));
+async function start() {
 
-const homeController = require('./controllers/homeController.js');
-const createController = require('./controllers/createController.js');
-const detailsController = require('./controllers/detailsController.js');
-const defaultController = require('./controllers/defaultController.js');
+    const app = express();
 
-app.use(homeController);
-app.use('/create', createController);
-app.use('/details',detailsController)
-app.all('*', defaultController);
+    await databaseConfig(app);
+    expressConfig(app);
+    routesConfig(app);
 
-
-app.listen(config.port);
+    app.listen(5000);   
+}
