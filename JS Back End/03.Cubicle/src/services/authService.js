@@ -5,11 +5,11 @@ const bcrypt = require('bcrypt');
 const secret = 'wad2a2da2ddd';
 
 async function register(username, password) {
-    const existing = await User.findOne({ username }).collation({ locale: 'en', strength: 2 });
+    // const existing = await User.findOne({ username }).collation({ locale: 'en', strength: 2 });
 
-    if (existing) {
-        throw new Error('Username is taken!');
-    }
+    // if (existing) {
+    //     throw new Error('Username is taken!');
+    // }
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -32,7 +32,7 @@ async function login(username, password) {
 
     const match = await bcrypt.compare(password, existing.hashedPassword);
     if (!match) {
-        throw new Error('Passwords don\'t match!');
+        throw new Error('Wrong password!');
     }
 
     return {

@@ -9,13 +9,16 @@ router.get('/:id', async (req, res) => {
     const accessories = await getAllAccessories();
 
     let existing;
-
+    let isOwner;
     if(cube.accessories) {
         existing = accessories.filter(x => cube.accessories.some(a => a._id.toString() == x._id.toString()));
     }
 
     if(cube) {
-        res.render('details', { cube, existing, isOwner: req.user._id == cube.owner });
+        if(req.user){
+            isOwner = req.user._id == cube.owner
+        }
+        res.render('details', { cube, existing, isOwner });
     } else {
         res.render('404');
     }

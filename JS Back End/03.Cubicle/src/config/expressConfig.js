@@ -1,7 +1,7 @@
 const handlebars = require('express-handlebars');
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const auth = require('../middlewares/auth.js');
+const { authenticate } = require('../middlewares/auth.js');
 const userNav = require('../middlewares/userNav.js');
 
 const secret = 'wad2a2da2ddd';
@@ -16,6 +16,6 @@ module.exports = (app) => {
     app.use(express.urlencoded({ extended: true }));
     app.use(express.static('./src/static'));
     app.use(cookieParser());
-    app.use(auth(secret));
+    app.use(authenticate(secret));
     app.use(userNav());
 };

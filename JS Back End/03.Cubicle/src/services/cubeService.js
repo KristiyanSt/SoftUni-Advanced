@@ -1,7 +1,23 @@
 const Cube = require('../models/Cube.js');
 
-function getAll(search) {
-    return Cube.find({}).lean();
+async function getAll(search, fromDifficulty, toDifficulty) {
+    const options = {};
+    if(search) {
+        options.name = new RegExp(search, 'i')
+    }
+    if(fromDifficulty) {
+        options.difficultyLevel = { $gte: fromDifficulty}
+    }
+    if(toDifficulty) {
+        if(!options.difficultyLevel) {
+            options.difficultyLevel = {}
+        }
+
+        options.difficultyLevel.$lte = toDifficulty;
+        
+    }
+    return Cube.find(options).lean();
+    
 }
 
 async function getById(id) {
@@ -27,7 +43,7 @@ async function createCube(cubeData, userId) {
     return result;
 }
 
-async function update(cubeData, cubeId){
+async function update(cubeData, cubeId) {
     const cube = await Cube.findById(cubeId);
 
     const missing = Object.entries(cubeData).filter(([k, v]) => !v);
