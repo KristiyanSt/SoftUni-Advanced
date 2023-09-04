@@ -3,7 +3,9 @@ const { body, validationResult } = require('express-validator');
 
 const { createCube } = require('../services/cubeService.js');
 const { parseError } = require('../util/parser.js');
+
 const urlRegex = /^https?:\/\/.+/;
+
 router.get('/', (req, res) => {
 
     res.render('create');
