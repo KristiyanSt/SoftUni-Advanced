@@ -1,8 +1,8 @@
-const { signJwt } = require('../middlewares/auth.js');
 const { register, login } = require('../services/authService.js');
 
 const { body, validationResult } = require('express-validator');
 const { parseError } = require('../utils/errorParser.js');
+const { hasUser } = require('../middlewares/guards.js');
 
 
 const authController = require('express').Router();
@@ -32,7 +32,7 @@ authController.post('/register',
             }
 
             const payload = await register(req.body.username, req.body.email, req.body.password);
-            const token = signJwt(payload);
+            const token = req.signJwt(payload);
 
             res.cookie('token', token);
             res.redirect('/');
@@ -67,7 +67,7 @@ authController.post('/login',
             }
 
             const payload = await login(req.body.email, req.body.password);
-            const token = signJwt(payload);
+            const token = req.signJwt(payload);
 
             res.cookie('token', token);
             res.redirect('/');
@@ -82,8 +82,8 @@ authController.post('/login',
             });
         }
     });
-authController.get('/logout', (req,res) => {
-    // TODO check if it's right
+authController.get('/logout', hasUser(), (req,res) => {
+
     res.clearCookie('token');
     res.redirect('/');
 });

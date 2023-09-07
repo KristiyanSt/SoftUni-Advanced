@@ -10,21 +10,17 @@ async function authUser(req, res, next) {
             req.user = user;
             res.locals.hasUser = true;
         } catch(err) {
-
-            req.clearCookie('token');
-            //TODO
+            req.status(401).clearCookie('token').redirect('/login');
         }
     }
+
+    req.signJwt = (payload) => {
+        return jwt.sign(payload, secret);
+    }
+
     next();
 }
 
-function signJwt(payload) {
-    return jwt.sign(payload, secret);
-}
-
-
-
 module.exports = {
     authUser,
-    signJwt
 }

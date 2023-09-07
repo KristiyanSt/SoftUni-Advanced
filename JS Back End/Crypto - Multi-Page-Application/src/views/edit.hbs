@@ -1,0 +1,36 @@
+<main>
+    <!-- In case of error, you should display div with class "errorContainer" -->
+    <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+
+    {{#if error}}
+    <div>
+        <div class="errorContainer">
+            <p>{{error}}</p>
+        </div>
+    </div>
+    {{/if}}
+
+    <section id="edit-container">
+        <div class="edit-container-info">
+            <h1>Edit Announcement</h1>
+            <form action="/edit/{{body._id}}" method="post">
+                <label>Name:</label>
+                <input type="text" id="name" name="name" value="{{body.name}}">
+                <label>Image:</label>
+                <input type="text" id="image" name="imageUrl" value="{{body.imageUrl}}">
+                <label>Price:</label>
+                <input type="number" id="price" name="price" value="{{body.price}}">
+                <label>Description:</label>
+                <textarea name="description" id="description">{{body.description}}</textarea>
+                <label>Payment method:</label>
+                <select id="payment" name="paymentMethod">
+                    <option value="crypto-wallet" {{#if body.select1 }}selected {{/if}}>Crypto Wallet</option>
+                    <option value="credit-card" {{#if body.select2 }}selected {{/if}}>Credit Card</option>
+                    <option value="debit-card" {{#if body.select3 }}selected {{/if}}>Debit Card</option>
+                    <option value="paypal" {{#if body.select4 }}selected {{/if}}>PayPal</option>
+                </select>
+                <input type="submit" id="btn" value="EDIT"></input>
+            </form>
+        </div>
+    </section>
+</main>

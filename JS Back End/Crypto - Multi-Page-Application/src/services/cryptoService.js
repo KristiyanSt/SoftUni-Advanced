@@ -1,5 +1,4 @@
 const Crypto = require("../models/Crypto.js");
-const User = require("../models/User.js");
 
 
 async function createCrypto(data) {
@@ -14,8 +13,18 @@ async function createCrypto(data) {
     });
 }
 
-async function getAll() {
-    return Crypto.find({}).lean();
+async function getAll(name, paymentMethod) {
+    const options = {};
+    if (name || paymentMethod) {
+        options.name = {
+            $regex:  name, $options: 'i'
+        }
+        options.paymentMethod = {
+            $regex:  paymentMethod, $options: 'i' 
+        }
+    }
+
+    return Crypto.find(options).lean();
 }
 
 async function getById(id) {
@@ -28,9 +37,27 @@ async function buyCrypto(userId, cryptoId) {
     await crypto.save();
 }
 
+async function editCrypto(id, body) {
+    const crypto = await Crypto.findById(id);
+
+    crypto.name = body.name;
+    crypto.imageUrl = body.imageUrl;
+    crypto.price = body.price;
+    crypto.description = body.description;
+    crypto.paymentMethod = body.paymentMethod;
+
+    return crypto.save();
+}
+
+async function deleteById(id) {
+    return Crypto.findByIdAndDelete(id);
+}
+
 module.exports = {
     createCrypto,
     getAll,
     getById,
-    buyCrypto
+    buyCrypto,
+    editCrypto,
+    deleteById
 }
