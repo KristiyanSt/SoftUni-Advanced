@@ -1,14 +1,40 @@
-a {
-    border: 1px solid black;
-    border-radius: 12px;
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
 }
-a:hover{
-    cursor:default;
+
+body {
+    background-color: lightgray;
+}
+
+body * {
+    font-family: Roboto;
+}
+.first {
+    text-decoration: none;
+    font-size: 14px;
+}
+.button {
+    padding: 6px 8px;
+    border-radius: 16px;
+    background-color: transparent;
+}
+.button:hover{
+    cursor:pointer
 }
 .fill {
     background-color: rgb(51, 51, 51);
-    color: rgb(251, 251, 251)
+    color: rgb(251, 251, 251);
+    border:none;
 }
 .fill:hover{
     background-color: rgb(0, 102, 0);
+}
+.normal {
+    border: 2px solid rgb(51, 51, 51);
+}
+.hover.normal:hover{
+    background-color: rgb(251, 251, 251);
+    color:rgb(0, 102, 0);
+    border: 2px solid rgb(0, 102, 0);
 }
