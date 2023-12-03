@@ -1,0 +1,14 @@
+article {
+    width:500px;
+    height: 200px;
+    background-color:lightgray;
+    padding:10px;
+    overflow: auto;
+    text-align: center;
+}
+.title{
+    text-transform:uppercase;
+}
+.desc{
+    text-indent: 30px;
+}
