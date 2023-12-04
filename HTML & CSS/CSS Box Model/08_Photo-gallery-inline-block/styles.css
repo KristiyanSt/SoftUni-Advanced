@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(227, 230, 233);
+}
+ul li {
+    display: inline-block;
+    margin: 10px;
+    list-style: none;
+    border-width:0.4rem;
+    border-color: black;
+    border-style: solid;
+    background-color: white;
+    padding: 10px;
+}

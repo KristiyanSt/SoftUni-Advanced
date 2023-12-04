@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+    font-family: Helvetica, sans-serif;
+}
+main {
+    margin: 10px 0px 20px 30px;
+}
+article {
+    width:60%;
+    display: inline-block;
+}
+article header {
+    margin-bottom: 30px;
+}
+article img {
+    max-width: 400px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+p, ul {
+    margin-bottom: 30px;
+}
+aside {
+    width:35%;
+    float:right;
+}
