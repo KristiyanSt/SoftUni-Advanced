@@ -1,0 +1,28 @@
+body {
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+header,main,aside,footer {
+    border-radius: 3px;
+    background-color: rgb(181, 216, 255);
+    padding: 5px 10px;
+}
+
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+aside {
+}
+aside ul{
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+
+}
+aside ul li a {
+    display: block;
+    padding: 5px 0px;
+    text-decoration: none;
+    color:rgb(86, 40, 129);
+}
