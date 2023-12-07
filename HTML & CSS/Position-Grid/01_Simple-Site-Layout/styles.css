@@ -1,6 +1,23 @@
 body {
     display: grid;
     grid-template-columns: 100px auto;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    gap:10px;
+}
+header {
+    grid-area: header;
+}
+aside {
+    grid-area: aside;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
 }
 header,main,aside,footer {
     border-radius: 3px;
@@ -11,8 +28,6 @@ header,main,aside,footer {
 header h1 {
     display: inline-block;
     vertical-align: middle;
-}
-aside {
 }
 aside ul{
     list-style: none;
