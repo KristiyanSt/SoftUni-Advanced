@@ -1,0 +1,35 @@
+header {
+    display:flex;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    width: 80vw;
+    align-items: center;
+    margin: auto;
+    padding: 20px 0;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    width:80%;
+}
+.navList {
+    display:flex;
+    gap:1rem;
+}
+.navList li a{
+    color:rgb(0, 153, 0);
+    text-decoration: none;
+}
+main {
+    display:flex;
+    gap:1rem;
+    flex-direction: column;
+    width:80vw;
+    margin:auto;
+    padding:20px 0px;
+
+}
+main h1 {
+    font-size: 22px;
+    font-weight: 600;
+}

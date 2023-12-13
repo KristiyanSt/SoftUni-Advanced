@@ -1,0 +1,26 @@
+body {
+    background-color: lightgray;
+}
+.gallery{
+    width:50vw;
+    height:100vh;
+    margin:auto;
+}
+.gallery ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:15px;
+}
+.gallery li {
+    display:flex;
+    align-items: center;
+    width:30%;
+    justify-content: center;
+    border:5px solid black;
+    background-color: white;
+}
+.gallery li img{
+    width: 90%;
+    max-height: 90%;
+}

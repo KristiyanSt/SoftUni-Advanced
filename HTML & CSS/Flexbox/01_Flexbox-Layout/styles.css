@@ -14,16 +14,16 @@ header,main,aside,footer{
 }
 header, footer {
     flex-basis: 100%;
-    flex-grow: 1;
+    flex-grow:1;
     flex-shrink: 1;
 }
 main {
-    flex-basis:70%;
-    flex-grow:1;
-    flex-shrink:0;
+    flex-basis:600px;
+    flex-grow:2;
+    flex-shrink:1;
 }
 aside {
-    flex-basis:20%;
+    flex-basis:200px;
     flex-grow: 1;
-    flex-shrink:0;
+    flex-shrink:1;
 }
