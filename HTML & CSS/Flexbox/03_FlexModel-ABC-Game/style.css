@@ -1,25 +1,25 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(./Roboto-Regular.ttf);
+}
 html {
-    font-family: Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
 }
 
 .container {
     display: flex;
-    /* align-items: center; */
+    flex-direction: column;
     max-width: 15vw;
     height: 35rem;
-    background-color: yellow;
-    flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
 span {
     border: 1px solid black;
-    width: 30px;
-    height: 10px;
+    padding: 1rem; 
     text-align: center;
-    padding: 1rem;
 }
 
 .S {

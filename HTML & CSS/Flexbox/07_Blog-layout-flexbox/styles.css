@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+h1,
+h2 {
+    font-family: Georgia, serif;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.page header {
+    width: 100%;
+    border-bottom: 2px solid black;
+    padding: 15px 0px;
+    margin: 20px 0px 36px 0px;
+}
+
+main {
+    display:flex;
+    flex-wrap: wrap;
+    width: 70%;
+    gap:36px;
+    margin-bottom: 36px;
+}
+
+.page .title {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.firstSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.firstSection__heading,
+.secondSection__heading,
+.thirdSection__heading,
+.categories__heading,
+.socials__heading {
+    width: 100%;
+    font-size: 27px;
+}
+
+.firstSection p {
+    width: 100%;
+
+}
+
+.firstSection__image {
+    max-width: 120px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border: 3px solid black;
+    float: right;
+    margin-left: 10px;
+}
+
+.secondSection {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-bottom: 20px;
+}
+.secondSection__heading {
+    width:100;
+}
+.secondSection p:nth-of-type(2) {
+    width:45%;
+    flex-grow:1;
+}
+.secondSection blockquote {
+    display:flex;
+    flex-wrap: wrap;
+    width:45%;
+    flex-grow:1;
+    font:italic;
+    padding-left: 10px;
+    border-left:2px solid rgb(165, 163, 163);
+}
+.secondSection blockquote q{
+    font-style: italic;
+}
+.secondSection .blockquote__author {
+    text-align: end;
+    width: 100%;
+}
+.thirdSection {
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+.thirdSection__image {
+    max-width: 120px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border: 3px solid black;
+    float: left;
+    margin-right: 20px;
+}
+aside {
+    display:flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+    gap:20px;
+    width: 25%;
+}
+.categories, .socials {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    gap:10px;
+}
+.categories nav ul, .socials nav ul {
+    display:flex;
+    gap:5px;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+aside nav ul li {
+    width:100%;
+    list-style:square;
+}
+aside a {
+    color: rgb(0, 153, 0);
+}
+
