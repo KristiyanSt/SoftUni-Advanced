@@ -138,10 +138,6 @@ input:focus {
 }
 
 @media (min-width:371px) {
-    body {
-        background-color: yellow;
-    }
-
     .loginForm {
         width: 90%;
     }
