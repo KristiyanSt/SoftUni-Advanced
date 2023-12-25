@@ -3,8 +3,56 @@
 <head>
   <title>Create Task – Task Board</title>
   <link rel="stylesheet" href="styles.css">
+  <style type="text/css"></style>
 </head>
 
-<!-- TODO	add semantic tags here  -->
+<body>
+  <header>
+    <a href="../Home-Page/home.html">🖹</a>
+    <h1>Welcome</h1>
+  </header>
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="../Home-Page/home.html">Home</a></li>
+        <li><a href="../Task-Details-Page/task-details.html">Task Board</a></li>
+        <li><a href="../Create-Task-Page/create-task.html">Create</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <form action="#">
+      <table>
+        <tbody>
+          <tr class="title">
+            <th>Title</th>
+            <td><input type="text"></td>
+          </tr>
+          <tr class="description">
+            <th>Description</th>
+            <td>
+              <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+            </td>
+          </tr>
+          <tr class="board">
+            <th>Board</th>
+            <td>
+              <select name="type" id="type">
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Done">Done</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button>Create</button>
+    </form>
+  </main>
+  <footer>
+    <div>© 2021 - Task Board</div>
+  </footer>
+</body>
 
 </html>

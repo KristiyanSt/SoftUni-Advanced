@@ -1,0 +1,30 @@
+@import url("./reset.css");
+@import url("./typography.css");
+@import url("./components.css");
+
+:root {
+    --color-primary: #830683;
+    --color-black: #000000;
+    --color-gray: #54546d;
+    --color-gray-light: #616178;
+    --color-gray-dark: #2c2c3a;
+    --color-white: #fff;
+
+    --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --navi-height: 58px;
+}
+
+.header{
+    display: flex;
+}
+
+.logo .logo__title {
+    color: var(--color-primary)
+}
+.logo .logo__subtitle {
+    text-transform: uppercase;
+    /* font-size: */
+}
