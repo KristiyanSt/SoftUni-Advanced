@@ -1,0 +1,71 @@
+@import url(./reset.css);
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+:root {
+    --color-blue-regular: #1aa1b9;
+    --color-blue-light: #2aadc1;
+    --color-blue-lighter: #6bbfff;
+    --color-blue-dark: #008cba;
+    --color-dark: #454545;
+    --color-grey: #393f43;
+    --color-grey-dark: #2f3539;
+    --color-white: #ffffff;
+
+    --fs-600: 1rem;
+    --fs-800: 1.125rem;
+    --fs-3200: 2rem;
+}
+
+/*
+        HEADER
+--------------------
+*/
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 28px 200px;
+    color:var( --color-dark);
+}
+header .header__title {
+    font-size: var(--fs-3200);
+}
+header .header__title span{
+    color:var(--color-blue-regular);
+}
+header .header__links {
+    font-size: var(--fs-800);
+
+    display: flex;
+    gap: var(--fs-3200);
+}
+header .header__links a {
+    text-decoration: none;
+    color: var(--color-dark);
+    line-height: 1.5;
+}
+header .header__links li:first-child {
+    border-bottom: 2.5px solid var(--color-blue-light);
+}
+
+/* 
+    HERO
+------------------
+*/
+.hero {
+    height:600px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position:absolute;
+    width:100%;
+    /* top:0;
+    bottom:0; */
+    background: url(../images/slide2.jpg) 0 0 no-repeat;
+}
