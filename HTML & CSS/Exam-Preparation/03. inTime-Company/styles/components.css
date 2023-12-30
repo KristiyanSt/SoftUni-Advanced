@@ -1,0 +1,22 @@
+.btn {
+    border: none;
+    border-radius: 18px;
+    padding: 8px 32px;
+    cursor: pointer;
+    font-size: var(--fs-800)
+}
+
+.divider {
+    background-color: var(--color-blue-lighter);
+    width: 100px;
+    height: 3px;
+    margin: 0 auto 1rem;
+}
+
+.input {
+    border: none;
+    padding: 12px 14px;
+    border-radius: 4px;
+    font-style: italic;
+    width: 500px;
+}

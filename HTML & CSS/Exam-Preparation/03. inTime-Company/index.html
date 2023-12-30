@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://kit.fontawesome.com/4dc6e8e68d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <h2 class="header__title">In<span>Time</span></h2>
@@ -23,75 +25,89 @@
     </header>
     <main>
         <section class="hero">
-            <!-- <img src="./images/slide2.jpg" alt="slide"> -->
             <div class="info">
                 <h1 class="info__title">READY TO PROMOTE YOUR NEW BUSINESS</h1>
-                <button>GET STARTED</button>
+                <button class="info__btn btn">GET STARTED</button>
             </div>
         </section>
-        <section class="company">
-            <h1 class="company__title">WELCOME TO OUR COMPANY</h1>
-            <span class="divider"></span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button>Read More</button>
+        <section class="company section">
+            <div class="company__wrapper">
+                <h1 class="company__title">WELCOME TO OUR COMPANY</h1>
+                <div class="divider"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.</p>
+                <button class="company__btn btn">Read More</button>
+            </div>
         </section>
-        <section class="services">
+        <section class="services section">
             <h1 class="services__title">OUR SERVICES</h1>
-            <span class="divider"></span>
+            <div class="divider"></div>
             <ul class="services__articles">
                 <li>
                     <article>
+                        <img src="./images/service1.jpg" alt="">
                         <h3>Service Name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button>Read More</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button class="services__btn btn">Read More</button>
                     </article>
                 </li>
                 <li>
                     <article>
+                        <img src="./images/service2.jpg" alt="">
                         <h3>Service Name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button>Read More</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button class="services__btn btn">Read More</button>
                     </article>
                 </li>
                 <li>
                     <article>
+                        <img src="./images/service3.jpg" alt="">
                         <h3>Service Name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button>Read More</button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button class="services__btn btn">Read More</button>
                     </article>
                 </li>
             </ul>
         </section>
-        <section class="subscription">
+        <section class="subscription section">
             <h1 class="subscription__title">SUBSCRIBE TO OUR NEWSLETTER</h1>
-            <span class="divider"></span>
+            <div class="divider"></div>
             <p class="subscription__text">Sign up for our mailing list to get latest updates and offers.</p>
             <div class="subscription__form">
-                <input type="text" placeholder="Email Address...">
-                <button>Subscribe</button>
+                <input type="text" class="input" placeholder="Email Address...">
+                <button class="subscription__btn btn">Subscribe</button>
             </div>
         </section>
     </main>
     <footer>
-        <section class="top-footer">
+        <section class="top-footer section">
             <nav>
                 <ul class="top-footer__links">
                     <li>
                         <h4>Quick Links</h4>
                         <ul>
-                            <li>Home</li>
-                            <li>About Us</li>
-                            <li>FAQs</li>
-                            <li>Services</li>
-                            <li>Contact</li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </li>
                     <li>
                         <h4>Services</h4>
                         <ul>
-                            <li>Contact us</li>
-                            <li>Write us</li>
-                            <li>Call us</li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Write us</a></li>
+                            <li><a href="#">Call us</a></li>
                         </ul>
                     </li>
                     <li>
@@ -102,21 +118,21 @@
                             <li>(01) 800 854 633</li>
                         </ul>
                     </li>
+                    <li class="socials">
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                        </ul>
+                    </li>
                 </ul>
-                <section class="socials">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                    </ul>
-                </section>
             </nav>
         </section>
         <section class="bottom-footer">
-            <p>Copyright © 2018 InTime. All Rights Reserved.</p>
-            <span>InTime</span>
+            <p>Copyright © 2018 InTime. All Rights Reserved. <span>InTime</span></p>
         </section>
     </footer>
 </body>
+
 </html>
